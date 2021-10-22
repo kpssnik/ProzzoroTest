@@ -18,12 +18,31 @@ namespace ProzzoroTest.Controllers
         public IActionResult Index()
         {
             return View();
-        }   
+        }
 
         [HttpPost]
-        public ViewResult AddContact(Models.ContactModel contact)
+        public ViewResult AddContact(Models.ContactModel model)
         {
-            return View("Index");
+            if (ModelState.IsValid)
+            {
+                // Думаю не лучшая идея, но в голову другая не пришла
+                _contactRepository.SaveContact(new Domain.Entities.Contact()
+                {
+                    FullName = model.FullName,
+                    Age = model.Age,
+                    Email = model.Email,
+                    Experience = model.Experience,
+                    Message = model.Message,
+                    PhoneNumber = model.PhoneNumber,
+                    IsValid = true
+                });
+
+                return View("Thanks!");
+            }
+            else
+            {
+                return View("Index");
+            }
         }
 
     }
