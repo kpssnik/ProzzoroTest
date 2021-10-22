@@ -1,4 +1,10 @@
-﻿ <!-- Portfolio Section-->
+﻿@using ProzzoroTest.Domain.Entities
+@{
+    ViewBag.Title = "Home";
+    ViewBag.LargeTextLength = 50;
+}
+
+<!-- Portfolio Section-->
 <section class="page-section portfolio" id="portfolio">
     <div class="container">
         <!-- Portfolio Section Heading-->
@@ -12,59 +18,27 @@
         <!-- Portfolio Grid Items-->
         <div class="row justify-content-center">
             <!-- Portfolio Item 1-->
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <h1 class="text-center text-white">Basic C++ development using STL and Boost libraries</h1>
+
+            @foreach (SkillItem skillItem in ViewBag.SkillItems)
+            {
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            @if (skillItem.Description.Length > ViewBag.LargeTextLength)
+                            {
+                                ViewBag.HType = "h3";
+                            }
+                            else
+                            {
+                                ViewBag.HType = "h1";
+                            }
+
+                            <@ViewBag.HType class="text-center text-white">@skillItem.Description</@ViewBag.HType>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/@skillItem.ImageSource" alt="@skillItem.ImageAlt" />
                     </div>
-                    <img class="img-fluid" src="assets/img/portfolio/cpp.png" alt="..." />
                 </div>
-            </div>
-            <!-- Portfolio Item 2-->
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <h1 class="text-center text-white">Creating applications using C# technologies</h1>
-                    </div>
-                    <img class="img-fluid" src="assets/img/portfolio/net.png" alt="..." />
-                </div>
-            </div>
-            <!-- Portfolio Item 3-->
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <h1 class="text-center text-white">Marking up web pages using HTML/CSS with Bootstrap</h1>
-                    </div>
-                    <img class="img-fluid" src="assets/img/portfolio/html.png" alt="..." />
-                </div>
-            </div>
-            <!-- Portfolio Item 4-->
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <h1 class="text-center text-white">Experience with MSSQL Server</h1>
-                    </div>
-                    <img class="img-fluid" src="assets/img/portfolio/mssql.png" alt="..." />
-                </div>
-            </div>
-            <!-- Portfolio Item 5-->
-            <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <h3 class="text-center text-white">Code-First approach and Reverse Engineering using ORM Entity Framework Core</h3>
-                    </div>
-                    <img class="img-fluid" src="assets/img/portfolio/efcore.png" alt="..." />
-                </div>
-            </div>
-            <!-- Portfolio Item 6-->
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <h1 class="text-center text-white">Creating web applications using ASP.NET Core</h1>
-                    </div>
-                    <img class="img-fluid" src="assets/img/portfolio/asp.png" alt="..." />
-                </div>
-            </div>
+            }            
         </div>
     </div>
 </section>

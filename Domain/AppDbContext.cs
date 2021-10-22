@@ -96,28 +96,28 @@ namespace ProzzoroTest.Domain
                 {
                     Id = 1,
                     Description = "First image",
-                    ImageSource = "4.png",
+                    ImageSource = "4.jpg",
                     Alt = "First image"
                 },
                 new GalleryImage()
                 {
                     Id = 2,
                     Description = "Second image",
-                    ImageSource = "3.png",
+                    ImageSource = "3.jpg",
                     Alt = "Second image"
                 },
                 new GalleryImage()
                 {
                     Id = 3,
                     Description = "Third image",
-                    ImageSource = "2.png",
+                    ImageSource = "2.jpg",
                     Alt = "Third image"
                 },
                 new GalleryImage()
                 {
                     Id = 4,
                     Description = "Fourth image",
-                    ImageSource = "1.png",
+                    ImageSource = "1.jpg",
                     Alt = "Fourth image"
                 }
             };
