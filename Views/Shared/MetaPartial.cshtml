@@ -1,6 +1,8 @@
-﻿<meta charset="utf-8" />
+﻿@using ProzzoroTest.Service
+
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="author" content="Nikita Kalnitskiy" />
+<meta name="author" content="@Config.Author" />
 
 @{
     if (ViewBag.Title != null)
@@ -9,6 +11,6 @@
     }
     else
     {
-        <title>Prozzoro</title>
+        <title>@Config.ProjectName</title>
     }
 } 
