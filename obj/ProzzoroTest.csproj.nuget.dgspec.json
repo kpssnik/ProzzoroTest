@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Programming\\PROJECTS\\ProzzoroTest\\ProzzoroTest\\ProzzoroTest.csproj": {}
+    "C:\\Users\\User\\Downloads\\ProzzoroTest\\ProzzoroTest.csproj": {}
   },
   "projects": {
-    "E:\\Programming\\PROJECTS\\ProzzoroTest\\ProzzoroTest\\ProzzoroTest.csproj": {
+    "C:\\Users\\User\\Downloads\\ProzzoroTest\\ProzzoroTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programming\\PROJECTS\\ProzzoroTest\\ProzzoroTest\\ProzzoroTest.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Downloads\\ProzzoroTest\\ProzzoroTest.csproj",
         "projectName": "ProzzoroTest",
-        "projectPath": "E:\\Programming\\PROJECTS\\ProzzoroTest\\ProzzoroTest\\ProzzoroTest.csproj",
+        "projectPath": "C:\\Users\\User\\Downloads\\ProzzoroTest\\ProzzoroTest.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\Programming\\PROJECTS\\ProzzoroTest\\ProzzoroTest\\obj\\",
+        "outputPath": "C:\\Users\\User\\Downloads\\ProzzoroTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

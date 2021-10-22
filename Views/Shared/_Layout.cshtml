@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+    <!-- Meta partial -->
+    @await Html.PartialAsync("MetaPartial")
+
+    <!-- Link partial -->
+    @await Html.PartialAsync("LinkPartial") 
+
+</head>
+
+<body id="page-top">
+    <!-- Navigation partial -->
+    @await Html.PartialAsync("NavigationPartial") 
+   
+    <!-- Masthead partial -->
+    @await Html.PartialAsync("MastheadPartial") 
+    
+    @RenderBody()
+
+    <!-- Footer Partial -->  
+    @await Html.PartialAsync("FooterPartial") 
+
+    <!-- Scripts Partial -->
+    @await Html.PartialAsync("ScriptsPartial") 
+  
+</body>
+
+</html>
