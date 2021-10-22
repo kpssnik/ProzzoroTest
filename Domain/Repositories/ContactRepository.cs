@@ -18,7 +18,7 @@ namespace ProzzoroTest.Domain.Repositories
 
         public IQueryable<Contact> GetContacts()
         {
-            return _context.Contacts;
+            return _context.Contacts.Where(p=>p.IsValid == true);
         }
 
         public void SaveContact(Contact contact)

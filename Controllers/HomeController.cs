@@ -14,6 +14,7 @@ namespace ProzzoroTest.Controllers
         private static AppDbContext _context = new AppDbContext();
         private SkillItemRepository _skillItemRepository = new SkillItemRepository(_context);
 
+        [HttpGet]
         public IActionResult Index()
         {
             ViewBag.SkillItems = _skillItemRepository.GetSkillItems();

@@ -14,6 +14,7 @@ namespace ProzzoroTest.Controllers
         private static AppDbContext _context = new AppDbContext();
         private GalleryImageRepository _galleryImageRepository = new GalleryImageRepository(_context);
 
+        [HttpGet]
         public IActionResult Index()
         {
             ViewBag.GalleryImages = _galleryImageRepository.GetGalleryImages();
