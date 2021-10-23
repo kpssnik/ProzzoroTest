@@ -3,7 +3,7 @@
 <section class="page-section" id="contact">
     <div class="container">
         <!-- Contact Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Apply for Middle Full-Stack Developer!</h2>
         <!-- Icon Divider-->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -20,7 +20,7 @@
                 <!-- To make this form functional, sign up at-->
                 <!-- https://startbootstrap.com/solution/contact-forms-->
                 <!-- to get an API token!-->
-                <form id="contactForm" method="post" asp-action="AddContact" , asp-controller="Contact">
+                <form id="contactForm" method="post" asp-action="AddContact" asp-controller="Contact">
                     <div asp-validation-summary="All" id="alert-msg" class="alert-msg"></div>
                     <!-- Name input-->
                     <div class="form-floating mb-3">
@@ -54,10 +54,12 @@
                         <textarea asp-for="Message" name="Message" class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem"></textarea>
                         <label for="message">Message</label>
                     </div>
-                    <!-- Submit success message-->
-                    
                     <!-- Submit Button-->
-                    <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Send</button>
+                    <button class="btn btn-primary btn-xl w-25 mb-3" id="submitButton" type="submit">Send</button>
+                </form>
+
+                <form method="get" id="downloadWord" asp-action="DownloadExcel" asp-controller="Contact">
+                    <button class="btn btn-secondary btn-xl w-25" id="submitButton" type="submit">Download</button>
                 </form>
             </div>
         </div>

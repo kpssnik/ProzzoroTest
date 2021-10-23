@@ -13,5 +13,6 @@ namespace ProzzoroTest.Service
         public static string InstagramLink { get; set; }
         public static string GithubLink { get; set; }
         public static string Author { get; set; }
+        public static string ExcelPath { get; set; }
     }
 }

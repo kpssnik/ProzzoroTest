@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProzzoroTest.Domain;
 using ProzzoroTest.Domain.Repositories;
+using ProzzoroTest.Service;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +15,7 @@ namespace ProzzoroTest.Controllers
     {
         private static AppDbContext _context = new AppDbContext();
         private ContactRepository _contactRepository = new ContactRepository(_context);
+
 
         [HttpGet]
         public IActionResult Index()
@@ -37,13 +40,34 @@ namespace ProzzoroTest.Controllers
                     IsValid = true
                 });
 
-                return View("Thanks!");
+                ExcelManager.AppendToExcel(model);
+
+                return View("Thanks");
             }
             else
             {
                 return View("Index");
             }
         }
+
+        [HttpGet]
+        public FileResult DownloadExcel()
+        {
+            byte[] fileBytes = null;
+
+            try
+            {
+                fileBytes = System.IO.File.ReadAllBytes(Config.ExcelPath);
+            }
+            catch (IOException)
+            { }
+
+            string fileName = Config.ExcelPath.Split('/').LastOrDefault();
+            fileName ??= "Contact.xlsx";
+
+            return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
+        }
+
 
     }
 }

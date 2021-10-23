@@ -10,7 +10,7 @@ namespace ProzzoroTest.Models
     public class ContactModel
     {
         [Required(ErrorMessage ="Please enter your name")]
-        [RegularExpression(@"^[A-Z][-a-zA-Z]+$", ErrorMessage = "Incorrect name. Pattern: FirstName LastName")]
+        [RegularExpression(@"^([А-Я][а-я]{0,})\s([А-Я][а-я]{0,})$", ErrorMessage = "Incorrect name. Pattern: FirstName LastName")]
         [MaxLength(40, ErrorMessage = "Incorrect name. So long, 40 symbols max")]
         public string FullName { get; set; }
 
@@ -27,7 +27,7 @@ namespace ProzzoroTest.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Please enter your phone number")]
-        [RegularExpression(@"/^((\+?3)?8)?((0\(\d{2}\)?)|(\(0\d{2}\))|(0\d{2}))\d{7}$/", ErrorMessage = "Incorrect phone number. Valid: +380xxxxxxxxx")]
+        [RegularExpression(@"^\+?3?8?(0\d{2}\d{3}\d{2}\d{2})$", ErrorMessage = "Incorrect phone number. Valid: +380xxxxxxxxx or 380xxxxxxxxx")]
         [MaxLength(13, ErrorMessage = "Incorrect phone. Too long")]
         public string PhoneNumber { get; set; }
 
