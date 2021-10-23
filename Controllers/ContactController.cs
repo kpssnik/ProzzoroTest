@@ -28,7 +28,7 @@ namespace ProzzoroTest.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Думаю не лучшая идея, но в голову другая не пришла
+                // Not the best idea but i can't imagine other
                 _contactRepository.SaveContact(new Domain.Entities.Contact()
                 {
                     FullName = model.FullName,
@@ -40,6 +40,7 @@ namespace ProzzoroTest.Controllers
                     IsValid = true
                 });
 
+                // Appending model data to excel file while adding
                 ExcelManager.AppendToExcel(model);
 
                 return View("Thanks");
@@ -50,6 +51,7 @@ namespace ProzzoroTest.Controllers
             }
         }
 
+        // Excel download button result
         [HttpGet]
         public FileResult DownloadExcel()
         {
