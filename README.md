@@ -1,1 +1,1 @@
-# Testing app for Prozzoro
+# ASP.NET Core MVC Application for Prozzoro  
