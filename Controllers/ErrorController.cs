@@ -22,7 +22,7 @@ namespace ProzzoroTest.Controllers
                     break;
             }
 
-            return View();
+            return View(statusCode);
         }
     }
 }
