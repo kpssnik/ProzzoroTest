@@ -358,3 +358,4 @@ E:\Programming\PROJECTS\ProzzoroTest\ProzzoroTest\bin\Debug\netcoreapp3.1\System
 E:\Programming\PROJECTS\ProzzoroTest\ProzzoroTest\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
 E:\Programming\PROJECTS\ProzzoroTest\ProzzoroTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 E:\Programming\PROJECTS\ProzzoroTest\ProzzoroTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+E:\Programming\PROJECTS\ProzzoroTest\ProzzoroTest\obj\Debug\netcoreapp3.1\Razor\Views\Error\Index.cshtml.g.cs
